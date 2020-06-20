@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const { loginValidation } = require('../services/User');
 const { assignJwt } = require('../util/jwtUtil');
 
-router.post('/login', async (req, res) => {
+router.post('/', async (req, res) => {
   // validate the data
   const { error } = loginValidation(req.body);
   if (error) return res.status(422).send(error.details[0].message);

@@ -10,15 +10,6 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-  /*
-  const posts = await Post.find()
-    .then((data) => {
-      res.status(200).json(data);
-    })
-    .catch((err) => {
-      res.status(500).json(err);
-    });
-    */
 });
 
 // get a post
